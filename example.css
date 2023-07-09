@@ -1,0 +1,174 @@
+.fp-config__subtitle-btn {
+  padding: 6px 12px;
+  margin-top: 4px;
+  background: rgba(51, 51, 51, 0.9);
+  color: #B5B3B1;
+  font-size: 14px;
+  font-weight: 400;
+  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+  display: none;
+}
+.fp-config__subtitle-btn:hover {
+  background: #B5B3B1;
+  color: #333333;
+}
+.fp-config__subtitle-btn.active {
+  display: block;
+}
+.fp-config__subtitle-list {
+  min-width: 199px;
+  background-color: #333c;
+  flex-direction: column;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  display: none;
+}
+.fp-config__subtitle-list.active {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+.fp-config__subtitle-list.active + .fp-config-list {
+  display: none;
+}
+.fp-config__subtitle-back {
+  color: #b5b3b1;
+  cursor: pointer;
+  padding: 12px 8px 9px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: color .3s;
+  display: block;
+}
+.subtitle-item__but {
+  padding-left: 12px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.fp-config__subtitle-back::before {
+  content: "";
+  width: 7px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 16px;
+  right: 10px;
+  display: block;
+  background-image: url("data:image/svg+xml,%3Csvg width='7' height='9' viewBox='0 0 7 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 4.5L1 8' stroke='%23828282' stroke-width='1.5'/%3E%3C/svg%3E");
+}
+.fp-config__subtitle-back:hover {
+  color: #f2f2f2;
+}
+.fp-config__subtitle-back:hover::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='7' height='9' viewBox='0 0 7 9' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 4.5L1 8' stroke='%23f2f2f2' stroke-width='1.5'/%3E%3C/svg%3E");
+
+}
+.fp-config-but__font-color,
+.fp-config-but__background-color {
+  padding: 6px 9px 6px 12px;
+}
+.fp-config__subtitle-reset {
+  color: #b5b3b1;
+  padding: 4px 10px 10px 12px;
+  font-size: 14px;
+  font-weight: 700;
+  padding-right: 10px;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+  transition: color .3s;
+}
+.fp-config__subtitle-reset:hover {
+  color: #f2f2f2;
+}
+.fp-config__subtitle-item.active .fp-menu {
+  display: block !important;
+}
+.fp-config__subtitle-back.hidden {
+  display: none;
+}
+.fp-config__subtitle-btn.hidden {
+  display: none;
+}
+.fp-subtitle-menu {
+  padding-bottom: 2px;
+}
+
+/* ==========Списки со значениями */
+strong.subtitle-item__back {
+  padding: 14px 13px 12px 12px;
+}
+.subtitle-item__menu {
+  width: auto;
+}
+
+.fp-config-but__font-size + .subtitle-item__menu  {
+  padding-bottom: 6px;
+}
+.flowplayer:not(.is-touch) .fp-menu a.subtitle-item__subitem {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.fp-config-but__font-size + .subtitle-item__menu a.subtitle-item__subitem,
+.fp-config-but__font-color + .subtitle-item__menu a.subtitle-item__subitem, 
+.fp-config-but__background-color + .subtitle-item__menu a.subtitle-item__subitem, 
+.fp-config-but__background-opacity + .subtitle-item__menu a.subtitle-item__subitem {
+  line-height: 20px;
+}
+.subtitle-item__menu.fp-menu a.subtitle-item__subitem {
+  position: relative;
+}
+.subtitle-item__subitem.selected {
+  background-color: #828282;
+}
+.fp-menu .subtitle-item__subitem.selected:hover {
+  color: #bdbdbd;
+  font-weight: 500;
+}
+.subtitle-item__inner-color {
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  width: 14px;
+  height: 14px;
+  transform: translate(0, -50%);
+}
+.subtitle-item__inner-color::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #252525;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.subtitle-item__subitem:nth-child(2) .subtitle-item__inner-color::after {
+  background-color: #fff;
+}
+.fp-subtitle__value--color,
+.fp-subtitle__value--bg-color {
+  width: 14px;
+  height: 14px;
+  margin-left: auto;
+  margin-right: 36px;
+}
+.fp-subtitle__value--font-size {
+  padding-left: 30px;
+}
+.fp-subtitle__value--color::after,
+.fp-subtitle__value--bg-color:after {
+  display: none;
+}
+
+@media screen and (main-width: 601px) {
+  .fp-menu > * {
+    padding: 7px 20px 7px 0;
+    display: block; 
+  }
+}
